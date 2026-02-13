@@ -1,0 +1,9 @@
+/*
+ * Copyright (c) 2024 The ZMK Contributors
+ *
+ * SPDX-License-Identifier: MIT
+ *
+ * The SSD1306 128x32 OLED is already defined in the sofle board's
+ * sofle.dtsi. This overlay is intentionally minimal — we rely on
+ * the board-level display definition.
+ */

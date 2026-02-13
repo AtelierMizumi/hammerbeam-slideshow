@@ -1,0 +1,52 @@
+# Copyright (c) 2024 The ZMK Contributors
+# SPDX-License-Identifier: MIT
+
+if SHIELD_NICE_OLED_CUSTOM
+
+config CUSTOM_ANIMATION_SPEED
+    int "Animation speed (total cycle time in ms)"
+    default 300000
+
+config LV_Z_VDB_SIZE
+    default 64
+
+config LV_DPI_DEF
+    default 148
+
+config LV_Z_BITS_PER_PIXEL
+    default 1
+
+choice LV_COLOR_DEPTH
+    default LV_COLOR_DEPTH_1
+endchoice
+
+config ZMK_DISPLAY_STATUS_SCREEN_CUSTOM
+    select LV_USE_LABEL
+    select LV_USE_IMG
+    select LV_USE_CANVAS
+    select LV_USE_ANIMIMG
+    select LV_USE_ANIMATION
+    select LV_FONT_MONTSERRAT_12
+
+choice ZMK_DISPLAY_WORK_QUEUE
+    default ZMK_DISPLAY_WORK_QUEUE_DEDICATED
+endchoice
+
+choice ZMK_DISPLAY_STATUS_SCREEN
+    default ZMK_DISPLAY_STATUS_SCREEN_CUSTOM
+endchoice
+
+config LV_Z_MEM_POOL_SIZE
+    default 4096
+
+config ZMK_DISPLAY_DEDICATED_THREAD_STACK_SIZE
+    default 2048
+
+config ZMK_DISPLAY_DEDICATED_THREAD_PRIORITY
+    default 5
+
+config NICE_OLED_CUSTOM_WIDGET_INVERTED
+    bool "Invert display colors"
+    default n
+
+endif # SHIELD_NICE_OLED_CUSTOM

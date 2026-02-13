@@ -1,0 +1,9 @@
+file_format: "2"
+id: nice_oled_custom
+name: nice_oled_custom
+type: shield
+url: https://github.com/AtelierMizumi/sofle-v2-oled-zmk-firmware
+requires:
+  - i2c
+features:
+  - display
