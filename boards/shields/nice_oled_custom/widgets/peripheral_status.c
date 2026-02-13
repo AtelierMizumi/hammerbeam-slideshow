@@ -18,7 +18,7 @@ LOG_MODULE_DECLARE(zmk, CONFIG_ZMK_LOG_LEVEL);
 #include <zmk/event_manager.h>
 #include <zmk/events/ble_active_profile_changed.h>
 #include <zmk/usb.h>
-#include <zmk/ble.h>
+#include <zmk/split/bluetooth/peripheral.h>
 
 #include "peripheral_status.h"
 #include "util.h"
@@ -80,8 +80,8 @@ static struct peripheral_state peripheral_get_state(const zmk_event_t *eh) {
 #else
         .charging = false,
 #endif
-#if IS_ENABLED(CONFIG_ZMK_BLE)
-        .connected = zmk_ble_active_profile_is_connected(),
+#if IS_ENABLED(CONFIG_ZMK_SPLIT_BLE) && IS_ENABLED(CONFIG_ZMK_SPLIT_ROLE_PERIPHERAL)
+        .connected = zmk_split_bt_peripheral_is_connected(),
 #else
         .connected = true,
 #endif
