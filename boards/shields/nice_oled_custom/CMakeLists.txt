@@ -5,6 +5,7 @@ if(CONFIG_ZMK_DISPLAY)
 
 if(CONFIG_ZMK_DISPLAY_STATUS_SCREEN_CUSTOM)
     zephyr_library_named(nice_oled_custom)
+    zephyr_library_include_directories(${CMAKE_SOURCE_DIR}/include)
     zephyr_library_include_directories(${CMAKE_CURRENT_SOURCE_DIR})
     zephyr_library_include_directories(${CMAKE_CURRENT_SOURCE_DIR}/widgets/)
     zephyr_library_sources(custom_status_screen.c)
