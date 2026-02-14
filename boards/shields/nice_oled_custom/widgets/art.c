@@ -7,6 +7,7 @@
  */
 
 #include <lvgl.h>
+#include "art.h"
 
 
 #ifndef LV_ATTRIBUTE_IMG_HAMMERBEAM1

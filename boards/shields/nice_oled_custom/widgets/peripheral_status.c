@@ -22,10 +22,7 @@ LOG_MODULE_DECLARE(zmk, CONFIG_ZMK_LOG_LEVEL);
 
 #include "peripheral_status.h"
 #include "util.h"
-
-/* Provided by art.c */
-extern const lv_img_dsc_t *anim_imgs[];
-extern const size_t anim_imgs_len;
+#include "art.h"
 
 static sys_slist_t widgets = SYS_SLIST_STATIC_INIT(&widgets);
 
