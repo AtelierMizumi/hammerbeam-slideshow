@@ -1778,3 +1778,38 @@ const lv_img_dsc_t hammerbeam30 = {
 };
 
 
+
+const lv_img_dsc_t *anim_imgs[] = {
+    &hammerbeam1,
+    &hammerbeam2,
+    &hammerbeam3,
+    &hammerbeam4,
+    &hammerbeam5,
+    &hammerbeam6,
+    &hammerbeam7,
+    &hammerbeam8,
+    &hammerbeam9,
+    &hammerbeam10,
+    &hammerbeam11,
+    &hammerbeam12,
+    &hammerbeam13,
+    &hammerbeam14,
+    &hammerbeam15,
+    &hammerbeam16,
+    &hammerbeam17,
+    &hammerbeam18,
+    &hammerbeam19,
+    &hammerbeam20,
+    &hammerbeam21,
+    &hammerbeam22,
+    &hammerbeam23,
+    &hammerbeam24,
+    &hammerbeam25,
+    &hammerbeam26,
+    &hammerbeam27,
+    &hammerbeam28,
+    &hammerbeam29,
+    &hammerbeam30,
+};
+
+const size_t anim_imgs_len = sizeof(anim_imgs) / sizeof(lv_img_dsc_t *);
